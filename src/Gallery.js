@@ -10,12 +10,28 @@ const dbRef = ref(database)
 
  function Gallery (){
     const [galleryArray, setgalleryArray] = useState([]);
-
     useEffect(() => {
-      const arrayRef = database
-      console.log(arrayRef)
-
-        
+      onValue(dbRef, (snapshot) =>{
+        let savedResults = snapshot.val();
+        let newState = [];
+        for(let id in savedResults){
+          newState.push({
+            id:id,
+            title:savedResults[id].key[0].largeImageURL,
+            // picture: savedResults[key].largeImageURL
+          })
+        }
+        console.log(newState)
+        setgalleryArray(newState)
+        // console.log(galleryArray)
+        // for (let key in savedResults) {
+        //    newState.push({
+        //    id: key,
+        //    movieTitle: savedResults[key].movieTitle,
+        //    gif: savedResults[key].gifs
+        //    });
+        // }
+      })
       }, [])
     return(
         <div>

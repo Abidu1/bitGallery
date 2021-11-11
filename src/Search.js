@@ -69,7 +69,7 @@ const handleRemove = (e, item) =>{
 }
 
 const handlePushArray = (e, item) =>{
-  const imageArray = image
+  const imageArray = image;
   update(dbRef, {
     key: imageArray
   })
@@ -78,6 +78,7 @@ const handlePushArray = (e, item) =>{
     key: imageArray
   })
   setImage(resetImage);
+  setaddSave("none");
 
 }
 
@@ -119,7 +120,6 @@ const handlePushArray = (e, item) =>{
       </div>
       <div className={styles.saveButtonContainer}>
         <button style={{display: addSave}}onClick={(e) => handlePushArray(e,image)}>Save</button>
-        {/* <button onClick={(e) => addNewGallery(e,image)}>Restart</button> */}
       </div>
       <div>
       </div>
