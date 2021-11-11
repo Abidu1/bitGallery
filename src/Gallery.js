@@ -1,7 +1,7 @@
 import Search from './Search'
 import {useState, useEffect} from 'react'
 import firebase from './firebase';
-const arrayRef = firebase.database().ref("/")
+// const arrayRef = firebase.database().ref("/")
 
  function Gallery (){
     const [galleryArray, setgalleryArray] = useState([]);
