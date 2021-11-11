@@ -12,7 +12,7 @@ const dbRef = ref(database)
     const [galleryArray, setgalleryArray] = useState([]);
 
     useEffect(() => {
-      const arrayRef = dbRef
+      const arrayRef = database
       console.log(arrayRef)
 
         
