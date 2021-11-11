@@ -1,15 +1,22 @@
 import Search from './Search'
 import {useState, useEffect} from 'react'
 import firebase from './firebase';
-// const arrayRef = firebase.database().ref("/")
+import { getDatabase, ref, onValue, push, set, update, remove} from 'firebase/database';
+const database = getDatabase(firebase)
+// database reference. Reference will take in the database variable. This is where the content gets saved
+const dbRef = ref(database)
+
+
 
  function Gallery (){
     const [galleryArray, setgalleryArray] = useState([]);
 
     useEffect(() => {
+      const arrayRef = dbRef
+      console.log(arrayRef)
 
         
-      }, [galleryArray])
+      }, [])
     return(
         <div>
             <h2>Hello!</h2>

@@ -1,17 +1,14 @@
 import './App.css';
-// import Search from './Search'
 import AddGallery from './AddGallery';
 import Gallery from './Gallery';
-// import AddImage from './AddImage'
 import { useState, useEffect } from 'react'
-// import Header from './Header'
 import {
   BrowserRouter as Router,
   Routes,
   Link,
   Route
 } from 'react-router-dom'
-import firebase from './firebase';
+
 import styles from './App.module.css'
 import * as React from 'react';
 import { Paper, Box, Button } from '@mui/material';
@@ -44,29 +41,34 @@ const handleDisplay = () =>{
         </section>
       </div>
       <div>
-      <h1>Bit Gallery</h1>
     </div>
-    <div>
-        <nav>
-          <ul>
-            <li>
-              <a href>Home</a>
-            </li>
-            <li>
-              <Link to="/gallery">Gallery</Link>
-              <Routes>
-              <Route path='/gallery' element={<Gallery />}/>
-              </Routes>
-            </li>
-            </ul>
-          </nav>   
-      </div>
         <main>
-        <section>
-        {clicked ? 
-          <AddGallery />
-        : null} 
-        </section>
+        {clicked ? (
+
+        <div>
+          <h1>Bit Gallery</h1>
+          <header>
+            <nav>
+                <ul>
+                  <li>
+                    <a href>Home</a>
+                  </li>
+                  <li>
+                    <Link to="/gallery">Gallery</Link>
+                    <Routes>
+                    <Route path='/gallery' element={<Gallery />}/>
+                    </Routes>
+                  </li>
+                  </ul>
+              </nav>   
+             </header>
+             <section>
+              <AddGallery />
+            </section>
+         </div>
+
+        ) : null}
+       
         </main> 
       </div>
       </Router>

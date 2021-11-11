@@ -103,7 +103,7 @@ const handlePushArray = (e, item) =>{
         </ImageList>
         <ImageList sx={{ width: '100vw' , height: '100vh', overflowY: 'inherit', marginRight: '40px', marginLeft: '20px'}} variant="woven" cols={3} gap={8}>
         {image.map((picture) => (
-          <ImageListItem key={picture.webformartURL} sx={{height: '60vh', overflowY: 'none'}} >
+          <ImageListItem key={picture.webformartURL} sx={{height: '40vh', overflowY: 'none'}} >
             <img
               src={`${picture.webformatURL}`}
               srcSet={`${picture.webformatURL}`}
