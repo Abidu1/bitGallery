@@ -1,0 +1,18 @@
+.AddGallerybutton{
+    padding:20px;
+    display:flex;
+    justify-content: start;
+    margin:40px;
+    font-size:1.7rem;
+    background:white;
+    opacity: 1;
+    border-radius: 10px;
+    font-weight:300;
+    font-family: 'Comfortaa', cursive;
+    border: 2px solid black;
+}
+
+/* .headerContainer{
+    display:flex;
+    justify-content: center;
+} */
