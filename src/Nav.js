@@ -17,10 +17,10 @@ function Nav(){
               <nav>
                   <ul>
                     <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/bitGallery/">Home</Link>
                     </li>
                     <li>
-                      <Link to="/gallery">Gallery</Link>
+                      <Link to="/bitGallery/gallery">Gallery</Link>
                     </li>
                     </ul>
                 </nav>   
