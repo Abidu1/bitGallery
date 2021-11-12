@@ -12,17 +12,18 @@ const dbRef = ref(database)
     const [galleryArray, setgalleryArray] = useState([]);
     useEffect(() => {
       onValue(dbRef, (snapshot) =>{
-        let savedResults = snapshot.val();
-        let newState = [];
-        for(let id in savedResults){
-          newState.push({
-            id:id,
-            title:savedResults[id].key[0].largeImageURL,
-            // picture: savedResults[key].largeImageURL
-          })
-        }
-        console.log(newState)
-        setgalleryArray(newState)
+        // let savedResults = snapshot.val();
+        // let newState = [];
+        // for(let [key,value] of Object.entries(savedResults)){
+
+        //  newState.push({
+        //   id:key,
+        //   picture: value.key.collections
+        //   })
+        // }
+        // console.log(savedResults.key[0].largeImageURL)
+        
+        // setgalleryArray(savedResults.key[0].largeImageURL)
         // console.log(galleryArray)
         // for (let key in savedResults) {
         //    newState.push({
@@ -36,7 +37,7 @@ const dbRef = ref(database)
     return(
         <div>
             <h2>Hello!</h2>
-            {/* {galleryArray.map(item => <div key={item.id}> <img src={item.webformatURL} alt={item.tags} /> </div>)} */}
+            {/* {galleryArray.map(item => <div> <img src={item} /> </div>)} */}
         </div>
     )
  }
