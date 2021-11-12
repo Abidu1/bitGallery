@@ -8,14 +8,8 @@ import {
   } from 'react-router-dom'
 
 
-function Homepage ({clickButton}){
-    // const [enter, setEnter] = useState(clickButton);
-    // const [show, setShow] = useState("inline");
+function Homepage (){
 
-    // const handleDisplay = () =>{
-    //     setEnter(!enter);
-    //     setShow("none");
-    // }
 
     return(
         <div className={styles.homepageContainer}>
