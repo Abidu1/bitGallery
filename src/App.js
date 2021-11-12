@@ -25,14 +25,10 @@ const handleDisplay = () =>{
 
   return (
     <Router>
-      <Routes>
-        <Route path='/' element={<Homepage />}/>
-      </Routes>
       <div className={styles.pageBackground}>
       <Routes>
+        <Route path='/' element={<Homepage />}/>
         <Route path='/search' element={<Search />}/>
-      </Routes>
-      <Routes>
         <Route path='/gallery' element={<Gallery />}/>
       </Routes>
       </div>

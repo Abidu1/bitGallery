@@ -2,9 +2,11 @@ import Search from './Search'
 import {useState, useEffect} from 'react'
 import firebase from './firebase';
 import { getDatabase, ref, onValue, push, set, update, remove} from 'firebase/database';
+import Nav from './Nav'
 const database = getDatabase(firebase)
 // database reference. Reference will take in the database variable. This is where the content gets saved
 const dbRef = ref(database)
+
 
 
 
@@ -36,6 +38,7 @@ const dbRef = ref(database)
       }, [])
     return(
         <div>
+          <Nav />
             <h2>Hello!</h2>
             {/* {galleryArray.map(item => <div> <img src={item} /> </div>)} */}
         </div>
