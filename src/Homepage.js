@@ -16,7 +16,7 @@ function Homepage (){
           <section className={styles.Titlepage} >
                   <h1 className={styles.welcomeTitle}>Welcome to Bit Gallery</h1>
                   <p>You can use this website to create a small gallery </p>
-                  <Link to="/search" className={styles.clickHere}>Click here to start</Link>
+                  <Link to="/bitGallery/search" className={styles.clickHere}>Click here to start</Link>
           </section>
         </div>
     )

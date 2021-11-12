@@ -28,8 +28,8 @@ const handleDisplay = () =>{
       <div className={styles.pageBackground}>
       <Routes>
         <Route path='/bitGallery/' element={<Homepage />}/>
-        <Route path='/bitGallery/search' element={<Search />}/>
-        <Route path='/bitGallery/gallery' element={<Gallery />}/>
+        <Route exact path='/bitGallery/search' element={<Search />}/>
+        <Route eaxct path='/bitGallery/gallery' element={<Gallery />}/>
       </Routes>
       </div>
     </Router>
