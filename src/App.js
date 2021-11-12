@@ -25,6 +25,7 @@ const handleDisplay = () =>{
 
   return (
     <Router>
+      <Homepage />
       <div className={styles.pageBackground}>
       <Routes>
         <Route path='/' element={<Homepage />}/>
