@@ -21,6 +21,15 @@ function Search() {
   const [display, setDisplay] = useState([]);
   const [image, setImage] = useState([]);
   const [addSave, setaddSave] = useState("none");
+  const [buttonClick, setbuttonClick] = useState(false)
+  const [showBoard, setshowBoard] = useState("none");
+  const [closeButton, setcloseButton] = useState("inline")
+
+  const handlebuttonClick = () =>{
+    setbuttonClick(!buttonClick)
+    setshowBoard("flex");
+    setcloseButton("none")
+  }
 
 
   const handleChange = (event) => {
@@ -63,7 +72,7 @@ function Search() {
   }
 
   const handleRemove = (e, index) =>{
-    const hideArray = image
+    const hideArray = [...image]
     hideArray.splice(index, 1)
     setImage(hideArray)
   }
@@ -86,13 +95,14 @@ function Search() {
   return (
     <div>
       <div><Nav/ ></div>
-      <div className={styles.browseSection}>
+      <button className={styles.searchButton} onClick={handlebuttonClick} style={{display: closeButton}}>Search for images</button>
+      <div className={styles.browseSection} style={{display: showBoard}}>
         <div className={styles.searchAndSaveContainer}>
-          <ImageList sx={{ width: 450, height: 900, overflowX: 'hidden'}} cols={3} rowHeight={164} className={styles.listContainer}>
+          <ImageList sx={{ width: 300, height: 900, overflowX: 'hidden'}} cols={3} rowHeight={164} className={styles.listContainer}>
                   <ImageListItem>
                       <div className={styles.searchBar}>
                           <form action="#" onSubmit={handleSubmit}>
-                          <input className={styles.inputSearch} type= "text" value={userSearch} onChange={handleChange}/>
+                          <input className={styles.inputSearch} type= "text" placeholder="search for images" value={userSearch} onChange={handleChange}/>
                           <input className={styles.submitButton}type="submit" value="submit" />
                           </form>
                       </div>
@@ -103,24 +113,26 @@ function Search() {
                     </div>
                   </ImageListItem>
           </ImageList>
-          <ImageList sx={{ width: '100vw' , height: '100vh', overflowY: 'inherit', marginRight: '40px', marginLeft: '20px'}} variant="woven" cols={3} gap={8}>
-          {image.map((picture) => (
-            <ImageListItem key={picture.webformartURL} sx={{height: '40vh', overflowY: 'none'}} >
-              <img
-                src={`${picture.webformatURL}`}
-                srcSet={`${picture.webformatURL}`}
-                alt={picture.tags}
-                loading="lazy"
-              />
-              <div className={styles.removeButtonContainer}>
-              <button onClick={(e) => handleRemove(e,picture)}>Remove</button>
-              </div>
-            </ImageListItem>
-            ))}
-          </ImageList>
-        </div>
-        <div className={styles.saveButtonContainer}>
-          <button style={{display: addSave}}onClick={(e) => handlePushArray(e,image)}>Save</button>
+          <div>
+            <ImageList sx={{ width: '60vw' , height: '100vh', overflowY: 'inherit', marginRight: '40px', marginLeft: '20px'}} variant="woven" cols={3} gap={8}>
+            {image.map((picture) => (
+              <ImageListItem key={picture.webformartURL} sx={{height: '40vh', overflowY: 'none'}} >
+                <img
+                  src={`${picture.webformatURL}`}
+                  srcSet={`${picture.webformatURL}`}
+                  alt={picture.tags}
+                  loading="lazy"
+                />
+                <div className={styles.removeButtonContainer}>
+                <button onClick={(e) => handleRemove(e,picture)}>Remove</button>
+                </div>
+              </ImageListItem>
+              ))}
+            </ImageList>
+            <div className={styles.saveButtonContainer}>
+              <button style={{display: addSave}}onClick={(e) => handlePushArray(e,image)}>Save</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -15,13 +15,6 @@ import Search from './Search'
 import * as React from 'react';
 
 function App() {
-  const [show, setShow] = useState("inline");
-  const [clicked, setClick] = useState(false);
-
-const handleDisplay = () =>{
-    setClick(!clicked);
-    setShow("none");
-}
 
   return (
     <Router>

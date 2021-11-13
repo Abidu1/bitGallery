@@ -9,8 +9,6 @@ import {
 
 
 function Homepage (){
-
-
     return(
         <div className={styles.homepageContainer}>
           <section className={styles.Titlepage} >

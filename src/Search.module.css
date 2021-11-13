@@ -10,6 +10,24 @@ form{
     flex-direction: column;
 }
 
+.searchButton{
+    padding:10px;
+    border-style: none;
+    border-radius:2px;
+    background-color: pink;
+    color:black;
+    /* box-shadow: 2px 5px 2px lightslategray; */
+    margin-top:50px;
+    border: 3px solid black;
+    font-size:1.7rem;
+}
+
+.searchButton:hover{
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
+
 .searchBar{
     display:flex;
     justify-content: start;
@@ -21,27 +39,23 @@ form{
     padding-right:10px; */
     border-style: none;
     border-radius:10px;
-    background-color:lightskyblue;
+    background-color:black;
     color:white;
-    box-shadow: 2px 5px 2px lightslategray;
     margin:10px;
     font-size:1.5rem;
 }
 
 .inputSearch{
     padding:10px;
-    /* padding-left:40px;
-    padding-right:50px; */
     border-style: none;
-    border-radius:20px;
-    background-color:lightskyblue;
+    background-color:white;
     color:black;
     font-size:1.5rem;
-    box-shadow: 2px 5px 2px lightslategray;
+    border: 3px solid black;
 }
 
 .browseImages{
-    margin: 40px;
+    margin: 20px;
 }
 
 .addButton{
@@ -59,9 +73,15 @@ form{
     padding-right:20px;
     border-style: none;
     border-radius:10px;
-    background-color:lightskyblue;
+    background-color:white;
+    color:black;
+    border: 3px solid black;
+}
+
+.addButton button:hover{
+    background-color: black;
     color:white;
-    box-shadow: 1px 1px 2px lightslategray;
+    cursor: pointer;
 }
 
 .searchAndSaveContainer{
@@ -69,13 +89,8 @@ form{
     justify-content: space-evenly;
 }
 
-/* {
-    width:20%;
-} */
-
 .userSelectionContainer{
     display:flex;
-    /* flex-wrap:wrap; */
     width:60%;
 }
 
@@ -97,9 +112,15 @@ form{
     padding-right:20px;
     border-style: none;
     border-radius:10px;
-    background-color:rgb(255, 111, 111);
+    background-color:white;
+    color:black;
+    border: 3px solid black;
+}
+
+.removeButtonContainer button:hover{
+    background-color: black;
     color:white;
-    box-shadow: 1px 2px 1px rgb(68, 68, 68);
+    cursor: pointer;
 }
 
 .saveButtonContainer{
@@ -116,12 +137,17 @@ form{
     padding-right:20px;
     border-style: none;
     border-radius:10px;
-    background-color:lightskyblue;
+    background-color:black;
     color:white;
-    /* border: 3px solid black; */
-    /* box-shadow: 2px 5px 2px lightslategray; */
     margin:10px;
-
 }
+
+.saveButtonContainer button:hover{
+    background:pink;
+    color:black;
+    cursor: pointer;
+}
+
+
 
 
