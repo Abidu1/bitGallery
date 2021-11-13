@@ -39,7 +39,6 @@ const dbRef = ref(database)
     return(
         <div>
           <Nav />
-            <h2>Hello!</h2>
             {/* {galleryArray.map(item => <div> <img src={item} /> </div>)} */}
         </div>
     )
